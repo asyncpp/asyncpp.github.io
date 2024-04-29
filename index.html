@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=11">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Async++</title>
+        <link href="style.css" rel="stylesheet" type="text/css">
+    </head>
+    <body>
+        <div class="container">
+            <img src="logo.svg" class="logo">
+            <h1>Async++</h1>
+            <h2>Building blocks for C++20 coroutines</h2>
+            <p>The Async++ group of projects aims to provide an extensive set of libraries and wrappers for C++20's coroutines.</p>
+            <p>It consists of a core library and wrappers for commonly used libraries.</p>
+            <h3>Core library</h3>
+            <p>
+                The core library provides basic building blocks like task and generator types, a fiber implementation
+                that supports interaction with coroutines, events, signals, mutex types, various concepts and interfaces. It also
+                provides commonly required extensions like a timer and a dynamic thread pool implementation. In order to make usage easy
+                it is entirely header only. It also supports custom allocators for most types and coroutines to allow usage in areas
+                where memory allocation needs to be handled in a special way, like embedded or game applications.
+            </p>
+            <a href="/asyncpp">Documentation</a><br>
+            <a href="https://github.com/asyncpp/asyncpp">Source code</a>
+
+            <h3>Curl Wrapper</h3>
+            <p>
+                <b>asyncpp-curl</b> is a c++ wrapper around the popular libcurl library. It makes the use of asynchronous network requests
+                extremly easy by wrapping curl's multi interface and providing interoperability to coroutines. On top of that foundation
+                it provides convenience wrappers for the most commonly used features like http requests. It also includes a fully compliant
+                (based on the autobahn-ws test) Websocket client with support for permessage compression.
+            </p>
+            <a href="https://github.com/asyncpp/asyncpp-curl">Source code</a>
+
+            <h3>io_uring Wrapper</h3>
+            <p>
+                <b>asyncpp-uring</b> is a c++ wrapper around the linux specific io_uring library. It allows for super fast I/O without sacrificing
+                readability of the code. It is designed as a low-level building block for performance critical applications that can afford
+                being tied to a single operating system.
+            </p>
+            <a href="https://github.com/asyncpp/asyncpp-uring">Source code</a>
+
+            <h3>gRPC Wrapper</h3>
+            <p>
+                <b>asyncpp-grpc</b> is a helper library for gRPC. It wraps the asynchronous completion queue api and provides easy to use client
+                interfaces to easily consume a remote service from coroutine code without blocking the thread. It also provides a server
+                side task type to allow easily building fully asynchronous server methods.
+            </p>
+            <a href="https://github.com/asyncpp/asyncpp-uring">Source code</a>
+        </div>
+    </body>
+</html>
